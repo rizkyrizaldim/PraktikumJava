@@ -254,22 +254,19 @@ Hasil Output dari Code diatas adalah:
 
 <img width="636" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/c197a76e-0979-4a07-b2f5-58218b3ebe06">
 
-Algoritma BFS (Breadth-First Search) beroperasi dengan langkah-langkah berikut:
+Algoritma Breadth-First Search (BFS) berfungsi dengan langkah-langkah berikut:
 
-1. Pertama-tama, semua node diberi atribut warna putih, jarak maksimum, dan tidak memiliki pendahulu.
-2. Node awal (dalam kasus ini `n0`) ditandai sebagai abu-abu, memiliki jarak 0, dan tidak memiliki pendahulu.
-3. Node awal kemudian dimasukkan ke dalam antrian.
-4. Selama antrian tidak kosong, node pertama diambil dari antrian, dan semua tetangganya yang berwarna putih diubah menjadi abu-abu, dengan jarak yang diupdate sejauh satu langkah dari node sebelumnya, dan node sebelumnya diatur sebagai pendahulu. Setelah itu, mereka dimasukkan kembali ke dalam antrian.
-5. Node yang telah selesai diproses diubah statusnya menjadi hitam dan dicetak.
+Langkah pertama adalah menginisialisasi semua simpul dalam graf dengan atribut warna putih, jarak maksimum, dan tanpa pendahulu. Kemudian, simpul awal, yang dalam contoh ini disebut `n0`, diberi tanda abu-abu, dengan jarak awal 0, dan tidak memiliki simpul pendahulu. Simpul awal ini kemudian dimasukkan ke dalam antrian.
+
+Selama antrian belum kosong, simpul pertama diambil dari antrian. Selanjutnya, semua tetangga dari simpul tersebut yang masih berwarna putih akan diubah menjadi abu-abu. Jarak mereka diperbarui sejauh satu langkah dari simpul sebelumnya, dan simpul sebelumnya ditetapkan sebagai pendahulu. Setelah itu, tetangga-tetangga ini kembali dimasukkan ke dalam antrian untuk dianalisis.
+
+Simpul yang telah selesai diproses akan diubah statusnya menjadi hitam dan dicetak.
 
 Dengan metode ini, kita dapat menentukan bagaimana algoritma menemukan node 5 dengan memperhatikan urutan kunjungan:
 
-1. Node 0 adalah titik awal.
-2. Node 1 dan 2 adalah tetangga pertama dari node 0 yang dikunjungi.
-3. Karena BFS mengunjungi semua tetangga sebelum melanjutkan ke level berikutnya, node 1 dan 2 akan dikunjungi sebelum pindah ke node lain.
-4. Node 5 adalah tetangga dari node 2 dan akan dikunjungi setelah semua tetangga dari node 1 dan 2 telah dikunjungi.
+Langkah pertama adalah memulai dari simpul 0. Kemudian, simpul 1 dan 2, yang merupakan tetangga pertama dari simpul 0, akan dikunjungi. Karena BFS melakukan penelusuran terhadap seluruh tetangga sebelum melanjutkan ke level berikutnya, maka simpul 1 dan 2 akan dikunjungi sebelum berpindah ke simpul-simpul lainnya. Akhirnya, simpul 5, yang merupakan tetangga dari simpul 2, akan dikunjungi setelah semua tetangga dari simpul 1 dan 2 telah dijelajahi.
 
-Jadi, urutan kunjungan akan menjadi: `0 -> 1 -> 2 -> 3 -> 4 -> 5`. Harap diingat bahwa urutan kunjungan antara node pada level yang sama (seperti antara node 3 dan 4) dapat berubah tergantung pada implementasi algoritma.
+Oleh karena itu, urutan kunjungan akan menjadi: `0 -> 1 -> 2 -> 3 -> 4 -> 5`. Perlu diingat bahwa urutan kunjungan antara simpul-simpul pada level yang sama, seperti antara simpul 3 dan 4, dapat berubah tergantung pada cara implementasi dari algoritma.
 
 # 3. Ubahlah method static void main sehingga bentuk tree seperti Gambar 4.5 dapat dibentuk. Kemudian tentukan bagaimana algoritma BFS dapat menemukan node 9.
 # Code:
