@@ -1,9 +1,9 @@
 # Rizky Rizaldi Mastiyanto 
 # 5311421085
 # 1. Pelajari class EightPuzzleSearch, EightPuzzleSpace, dan Node.
-- EightPuzzleSearch: Kelas yang digunakan dalam konteks permainan teka-teki delapan kotak untuk mengimplementasikan algoritma pencarian solusi.
-- EightPuzzleSpace: Kelas yang merepresentasikan ruang keadaan dalam permainan teka-teki delapan kotak, mencakup informasi tentang keadaan, langkah-langkah, dan aturan permainan.
-- Node: Objek yang digunakan dalam algoritma pencarian, mewakili satu keadaan dalam ruang pencarian dengan informasi tentang keadaan, biaya, atau jarak.
+- Kelas EightPuzzleSearch digunakan dalam konteks permainan teka-teki delapan kotak untuk menerapkan algoritma pencarian solusi.
+- Kelas EightPuzzleSpace menggambarkan keadaan dalam permainan teka-teki delapan kotak, mencakup data tentang keadaan, langkah-langkah, dan aturan permainan.
+- Objek Node digunakan dalam algoritma pencarian, mewakili satu keadaan dalam ruang pencarian dengan informasi tentang keadaan, biaya, atau jarak.
 
 # 2. Ubahlah initial dan goal state dari program di atas sehingga bentuk initial dan goal statenya Gambar 5.8. Kemudian tentukan langkah-langkah mana saja sehingga puzzlenya mencapai goal state. Analisa dan bedakan dengan solusi pada point 1.
 # Code:
@@ -223,27 +223,21 @@
     }
 <img width="390" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/9afe1897-97df-41a1-b182-2aa76aafa073">
 
-Dalam kode Eight Puzzle yang telah diberikan, langkah-langkah untuk mencapai goal state dari initial state ditemukan di dalam class `EightPuzzleSearch`. Class `EightPuzzleSearch` mencari solusi menggunakan algoritma pencarian A* dengan pilihan penggunaan heuristic `h1` atau `h2`. Berikut adalah langkah-langkah untuk mencapai goal state:
+Dalam kode Eight Puzzle yang diberikan, proses untuk mencapai goal state dari initial state terletak di dalam class `EightPuzzleSearch`. Class ini menggunakan algoritma pencarian A* dengan opsi pemilihan heuristic `h1` atau `h2`. Berikut adalah langkah-langkah yang diambil untuk mencapai goal state:
 
-1. Inisialisasi initial state dan goal state.
-2. Membuat node awal (root) dengan initial state.
-3. Memasukkan node awal ke dalam daftar `open`.
-4. Selama daftar `open` tidak kosong, lakukan langkah-langkah berikut:
-   a. Pilih node dengan biaya terkecil (biaya yang dihitung berdasarkan heuristic dan panjang path).
-   b. Tambahkan node terpilih ke dalam daftar `closed` untuk menghindari pengulangan.
-   c. Jika node terpilih sama dengan goal state, maka solusi ditemukan, dan proses berakhir.
-   d. Dapatkan semua node penerus dari node terpilih.
-   e. Untuk setiap node penerus, hitung biaya baru berdasarkan heuristic, path length, dan biaya sebelumnya.
-   f. Jika node penerus belum pernah ada di daftar `open` atau biayanya lebih rendah, tambahkan node penerus ke daftar `open` dengan biaya yang diupdate.
+Pertama-tama, initial state dan goal state diinisialisasi. Selanjutnya, sebuah node awal (root) dibuat dengan menggunakan initial state. Node awal ini kemudian dimasukkan ke dalam daftar `open`.
 
-Langkah-langkah ini berulang hingga solusi ditemukan atau semua kemungkinan solusi dieksplorasi. Hasil akhir akan mencetak langkah-langkah solusi pada output.
+Selama daftar `open` masih memiliki elemen, langkah-langkah berikut diulang:
+1. Memilih node dengan biaya terkecil, yang dihitung berdasarkan heuristic dan panjang path.
+2. Menambahkan node terpilih ke dalam daftar `closed` untuk menghindari pengulangan.
+3. Jika node terpilih adalah goal state, maka solusi telah ditemukan dan proses pencarian berakhir.
+4. Mendapatkan semua node penerus dari node terpilih.
+5. Untuk setiap node penerus, biaya baru dihitung dengan mempertimbangkan heuristic, panjang path, dan biaya sebelumnya.
+6. Jika node penerus belum pernah ada di daftar `open` atau memiliki biaya yang lebih rendah, node penerus ditambahkan ke daftar `open` dengan biaya yang diperbarui.
 
-Perbedaan antara class `EightPuzzleSearch`, `EightPuzzleSpace`, dan `Node` adalah sebagai berikut:
-- `EightPuzzleSearch`: Bertanggung jawab untuk menjalankan algoritma pencarian A* dan mengatur logika pencarian.
-- `EightPuzzleSpace`: Menyediakan informasi tentang initial state dan goal state, serta menghasilkan node-node awal.
-- `Node`: Mewakili setiap keadaan dalam permainan Eight Puzzle dan menyimpan informasi tentang keadaan, biaya, dan node induknya.
+Langkah-langkah ini diulang sampai solusi ditemukan atau semua kemungkinan solusi telah dieksplorasi. Hasil akhir dari proses ini adalah pencetakan langkah-langkah solusi pada output.
 
-Semua tiga class ini bekerja bersama-sama untuk mencari dan mengeksekusi solusi Eight Puzzle.
+Class `EightPuzzleSearch` bertanggung jawab untuk melaksanakan algoritma pencarian A* dan mengelola logika pencarian. `EightPuzzleSpace` menyediakan informasi tentang initial state dan goal state, serta menghasilkan node-node awal. Sedangkan `Node` mewakili setiap keadaan dalam permainan Eight Puzzle dan menyimpan informasi tentang keadaan, biaya, dan node induknya. Ketiga class ini bekerja sama untuk mencari dan mengeksekusi solusi dari permainan Eight Puzzle.
 
 # 3. Ubahlah initial dan goal state dari program di atas sehingga bentuk initial dan goal statenya Gambar 5.9. Kemudian tentukan langkah-langkah mana saja sehingga puzzlenya mencapai goal state. Analisa dan bedakan dengan solusi pada point 1 dan 2.
 # Code:
@@ -453,20 +447,15 @@ Semua tiga class ini bekerja bersama-sama untuk mencari dan mengeksekusi solusi 
     }
 <img width="357" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/20fe61fe-d711-4bc4-bff0-84f7fc3067cb">
 
-Code di atas merupakan implementasi algoritma pencarian A* (A-star) untuk menyelesaikan masalah 8-puzzle. Dalam algoritma ini, terdapat dua heuristik yang dapat digunakan, yaitu h1Cost dan h2Cost, yang dapat memengaruhi jalannya algoritma. Berikut adalah langkah-langkah yang diperlukan untuk mencapai goal state dalam implementasi kode tersebut:
-1. Kondisi Awal (Root):
-    - {1, 5, 3, 4, 6, 8, 2, 7, 0}
-2. Kondisi Goal:
-    - {7, 6, 5, 8, 0, 4, 1, 2, 3}
-3. Jalannya Algoritma:
-    - Algoritma A* dimulai dengan kondisi awal (Root).
-    - Algoritma memeriksa semua langkah yang mungkin dari kondisi awal keadaan, mempertimbangkan kotak yang kosong, dan menggunakan salah satu heuristik (h1Cost atau h2Cost) untuk menghitung biaya.
-- Algoritma mencari jalur yang paling efisien ke goal state dengan mempertimbangkan biaya total (biaya heuristik, jarak sejauh ini, dan biaya sebelumnya).
-- Setiap langkah diambil untuk mencapai goal state dipilih berdasarkan prioritas biaya terendah, yang ditentukan oleh heuristik yang digunakan.
-- Algoritma terus berjalan hingga mencapai goal state.
+Implementasi kode di atas merupakan penggunaan algoritma pencarian A* untuk menyelesaikan masalah 8-puzzle. Dalam algoritma ini, terdapat dua jenis heuristik yang dapat digunakan, yaitu h1Cost dan h2Cost, yang berpengaruh pada jalannya algoritma. Berikut adalah langkah-langkah yang diperlukan untuk mencapai keadaan goal:
 
-Perbedaan antara penggunaan h1Cost dan h2Cost akan memengaruhi perhitungan biaya dan jalannya algoritma. Kedua heuristik ini mungkin menghasilkan solusi yang berbeda dalam beberapa kasus. Heuristik h1Cost menghitung biaya dengan menghitung jumlah angka yang tidak berada di tempat yang benar, sementara h2Cost menghitung biaya berdasarkan jarak Manhatten antara angka-angka yang salah dan posisi yang benar.
+1. Dimulai dengan keadaan awal (Root) yang diberikan, yaitu {1, 5, 3, 4, 6, 8, 2, 7, 0}.
+2. Tujuan akhir yang ingin dicapai adalah {7, 6, 5, 8, 0, 4, 1, 2, 3}.
+3. Algoritma A* dimulai dengan memeriksa semua kemungkinan langkah dari keadaan awal, mempertimbangkan posisi kotak yang kosong, dan menggunakan salah satu dari dua heuristik yang tersedia, yaitu h1Cost atau h2Cost, untuk menghitung biaya.
 
+Algoritma kemudian mencari jalur terbaik menuju keadaan goal dengan mempertimbangkan biaya total (termasuk biaya heuristik, jarak yang sudah ditempuh, dan biaya sebelumnya). Setiap langkah menuju keadaan goal dipilih berdasarkan prioritas biaya terendah, yang ditentukan oleh heuristik yang digunakan. Proses ini terus berlanjut hingga keadaan goal tercapai.
+
+Penting untuk diingat bahwa penggunaan heuristik h1Cost dan h2Cost dapat mempengaruhi perhitungan biaya dan jalannya algoritma. Kedua heuristik ini bisa menghasilkan solusi yang berbeda dalam beberapa kasus. Heuristik h1Cost menghitung biaya dengan cara menghitung jumlah angka yang tidak berada di posisi yang benar, sedangkan h2Cost menghitung biaya berdasarkan jarak Manhatten antara angka yang salah dan posisi yang benar.
 # 4. Ubahlah initial dan goal state dari program di atas sehingga bentuk initial dan goal statenya Gambar 5.10. Kemudian tentukan langkah-langkah mana saja sehingga puzzlenya mencapai goal state. Analisa dan bedakan dengan solusi pada point 1, 2, dan 3.
 # Code:
     package JavaApplivation2;
@@ -685,9 +674,9 @@ Perbedaan antara penggunaan h1Cost dan h2Cost akan memengaruhi perhitungan biaya
     }
 <img width="338" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/bc999852-3349-4cbd-a175-b185c303ab85">
 
-Code di atas adalah implementasi algoritma pencarian A* (A-star) untuk menyelesaikan masalah 8-puzzle. Dalam implementasi ini, ada dua heuristik yang dapat digunakan: h1Cost dan h2Cost, yang memengaruhi jalannya algoritma. Heuristik ini digunakan untuk menghitung biaya setiap langkah dalam pencarian solusi. Anda diminta untuk menentukan langkah-langkah yang harus diambil untuk mencapai goal state dan membandingkannya dengan solusi pada poin 1, code 1, dan code 2.
+Implementasi kode di atas merupakan penggunaan algoritma pencarian A* (A-star) untuk menyelesaikan masalah 8-puzzle. Dalam implementasi ini, terdapat dua heuristik yang dapat digunakan, yaitu h1Cost dan h2Cost, yang mempengaruhi jalannya algoritma. Heuristik ini digunakan untuk menghitung biaya setiap langkah dalam pencarian solusi.
 
-Langkah-langkah untuk menentukan solusi 8-puzzle dengan menggunakan implementasi di "code 3" adalah sebagai berikut:
+Untuk menentukan langkah-langkah mencapai goal state dalam implementasi "code 3", langkah-langkah yang harus diambil adalah sebagai berikut:
 
 1. Kondisi Awal (Root):
    - {1, 2, 3, 4, 5, 6, 7, 8, 0}
@@ -695,18 +684,13 @@ Langkah-langkah untuk menentukan solusi 8-puzzle dengan menggunakan implementasi
 2. Kondisi Goal:
    - {1, 2, 3, 4, 0, 5, 6, 7, 8}
 
-3. Jalannya Algoritma:
-   - Algoritma A* dimulai dengan kondisi awal (Root).
-   - Algoritma mencari langkah-langkah untuk mencapai goal state.
-   - Algoritma menggunakan heuristik h1Cost atau h2Cost untuk menghitung biaya langkah-langkah.
-   - Algoritma memilih langkah-langkah yang memiliki biaya terendah berdasarkan heuristik yang dipilih.
-   - Algoritma terus berjalan hingga mencapai goal state.
+3. Algoritma A* dimulai dengan keadaan awal (Root).
+4. Algoritma mencari langkah-langkah untuk mencapai goal state.
+5. Algoritma menggunakan heuristik h1Cost atau h2Cost untuk menghitung biaya langkah-langkah.
+6. Algoritma memilih langkah-langkah dengan biaya terendah berdasarkan heuristik yang dipilih.
+7. Algoritma terus berjalan hingga mencapai goal state.
 
-Perbandingan dengan solusi pada poin 1, code 1, dan code 2:
-- Solusi pada poin 1, code 1, dan code 2 juga menggunakan algoritma A* untuk menyelesaikan masalah 8-puzzle, tetapi mungkin menggunakan heuristik yang berbeda.
-- Perbedaan heuristik yang digunakan dapat memengaruhi urutan langkah-langkah dan waktu yang dibutuhkan untuk mencapai goal state.
-
-Solusi pada "code 3" di atas akan memberikan langkah-langkah spesifik yang menghasilkan goal state {1, 2, 3, 4, 0, 5, 6, 7, 8} berdasarkan heuristik yang dipilih (h1Cost atau h2Cost). Langkah-langkah tersebut dapat ditemukan dalam keluaran dari implementasi "code 3" setelah dijalankan.
+Dibandingkan dengan solusi pada poin 1, code 1, dan code 2, solusi pada "code 3" juga menggunakan algoritma A* untuk menyelesaikan masalah 8-puzzle. Namun, perbedaan heuristik yang digunakan dapat mempengaruhi urutan langkah-langkah dan waktu yang diperlukan untuk mencapai goal state. Hasil langkah-langkah spesifik yang menghasilkan goal state {1, 2, 3, 4, 0, 5, 6, 7, 8} akan terdapat dalam keluaran dari implementasi "code 3" setelah dijalankan.
 
 # 5. Ubahlah initial dan goal state dari program dan class-class di atas sehingga bentuk initial dan goal statenya Gambar 5.11. Kemudian tentukan langkah-langkah mana saja sehingga puzzlenya mencapai goal state.
 # Code:
@@ -929,18 +913,19 @@ Solusi pada "code 3" di atas akan memberikan langkah-langkah spesifik yang mengh
     }
 <img width="305" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/a522c30e-72c4-4d50-a1e4-5753d9690c06">
 
-Untuk menentukan langkah-langkah agar puzzle mencapai goal state pada Code 4, Anda dapat menggunakan algoritma pencarian seperti A* Search dengan menggunakan dua heuristik, yaitu h1Cost dan h2Cost yang telah didefinisikan dalam kode. Langkah-langkah umumnya adalah sebagai berikut:
+Untuk menentukan langkah-langkah agar puzzle mencapai goal state dalam Code 4, Anda dapat menggunakan algoritma pencarian seperti A* Search yang memanfaatkan dua heuristik, yaitu h1Cost dan h2Cost, yang telah didefinisikan dalam kode tersebut. Berikut adalah langkah-langkah umum yang dapat diikuti:
 
-1. Inisialisasi node awal dengan kondisi awal puzzle.
-2. Inisialisasi open list dan closed list. Letakkan node awal ke dalam open list.
-3. Selama open list tidak kosong, lakukan langkah-langkah berikut:
-   a. Ambil node dengan biaya terendah dari open list (node dengan biaya f = biaya heuristik + panjang path).
-   b. Jika node tersebut adalah goal state, maka puzzle telah terselesaikan. Akhiri pencarian.
-   c. Generate semua node turunan dari node saat ini.
-   d. Untuk setiap node turunan, hitung biaya f (dengan salah satu dari h1Cost atau h2Cost) dan panjang path dari node awal hingga node saat ini.
-   e. Jika node turunan sudah ada dalam open list dan biaya f yang baru lebih rendah, perbarui biaya dan parent dari node tersebut.
-   f. Jika node turunan sudah ada dalam closed list dan biaya f yang baru lebih rendah, perbarui biaya dan parent dari node tersebut, lalu pindahkan node dari closed list ke open list.
-   g. Jika node turunan belum ada dalam open list atau closed list, tambahkan node tersebut ke open list.
-   h. Tandai node saat ini sebagai telah dieksplorasi dengan memindahkannya ke dalam closed list.
+Langkah pertama adalah melakukan inisialisasi pada node awal menggunakan kondisi awal dari puzzle. Selanjutnya, siapkan dua daftar, yaitu open list dan closed list. Tempatkan node awal ke dalam open list untuk memulai pencarian.
 
-4. Jika pencarian selesai dan goal state telah ditemukan, kita dapat mengikuti parent nodes dari goal state untuk mendapatkan urutan langkah yang dibutuhkan untuk mencapai goal state.
+Selama open list masih memiliki elemen, langkah-langkah berikut akan dilakukan:
+1. Pilih node dengan biaya terendah dari open list (biaya f dihitung sebagai jumlah biaya heuristik dan panjang path).
+2. Periksa apakah node tersebut merupakan goal state. Jika ya, maka puzzle telah terselesaikan, dan pencarian dapat diakhiri.
+3. Hasilkan semua node turunan dari node saat ini.
+4. Untuk setiap node turunan, hitung biaya f (dengan menggunakan salah satu dari h1Cost atau h2Cost) dan panjang path dari node awal hingga node saat ini.
+5. Jika node turunan sudah ada dalam open list dan biaya f yang baru lebih rendah, perbarui biaya dan parent dari node tersebut.
+6. Jika node turunan sudah ada dalam closed list dan biaya f yang baru lebih rendah, perbarui biaya dan parent dari node tersebut. Selanjutnya, pindahkan node dari closed list ke open list.
+7. Jika node turunan belum ada dalam open list atau closed list, tambahkan node tersebut ke dalam open list.
+8. Tandai node saat ini sebagai telah dieksplorasi dengan memindahkannya dari open list ke dalam closed list.
+9. Jika pencarian selesai dan goal state telah ditemukan, kita dapat mengikuti parent nodes dari goal state untuk mendapatkan urutan langkah yang dibutuhkan untuk mencapai goal state.
+
+Langkah-langkah ini akan terus diulang hingga mencapai goal state atau jika seluruh kemungkinan solusi telah dieksplorasi. Dengan demikian, algoritma A* Search dengan dua heuristik h1Cost dan h2Cost dapat digunakan untuk menentukan solusi dari puzzle pada Code 4.
