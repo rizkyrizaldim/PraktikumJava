@@ -1,4 +1,5 @@
-# Rizky Rizaldi Mastiyanto - 5311421085
+# Rizky Rizaldi Mastiyanto 
+# 5311421085
 # 1. Pelajari class EightPuzzleSearch, EightPuzzleSpace, dan Node.
 - EightPuzzleSearch: Kelas yang digunakan dalam konteks permainan teka-teki delapan kotak untuk mengimplementasikan algoritma pencarian solusi.
 - EightPuzzleSpace: Kelas yang merepresentasikan ruang keadaan dalam permainan teka-teki delapan kotak, mencakup informasi tentang keadaan, langkah-langkah, dan aturan permainan.
