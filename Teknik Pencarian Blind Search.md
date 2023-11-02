@@ -1,4 +1,5 @@
-# Rizky Rizaldi Mastiyanto - 5311421085
+# Rizky Rizaldi Mastiyanto
+# 5311421085
 # 1. Tentukan bagaimana algoritma BFS di atas dapat menentukan node ke 8, 6, dan 7.
 # Code:
 
