@@ -221,7 +221,8 @@
         new EightPuzzleSearch().run();
     }
     }
-<img width="390" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/9afe1897-97df-41a1-b182-2aa76aafa073">
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/025d962b-6536-41ac-b2c9-e243115eb232)
+
 
 Dalam kode Eight Puzzle yang diberikan, proses untuk mencapai goal state dari initial state terletak di dalam class `EightPuzzleSearch`. Class ini menggunakan algoritma pencarian A* dengan opsi pemilihan heuristic `h1` atau `h2`. Berikut adalah langkah-langkah yang diambil untuk mencapai goal state:
 
@@ -445,7 +446,7 @@ Class `EightPuzzleSearch` bertanggung jawab untuk melaksanakan algoritma pencari
         new EightPuzzleSearch().run();
     }
     }
-<img width="357" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/20fe61fe-d711-4bc4-bff0-84f7fc3067cb">
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/b9ab896f-fa6b-46be-ba6b-9787fa7e85d8)
 
 Implementasi kode di atas merupakan penggunaan algoritma pencarian A* untuk menyelesaikan masalah 8-puzzle. Dalam algoritma ini, terdapat dua jenis heuristik yang dapat digunakan, yaitu h1Cost dan h2Cost, yang berpengaruh pada jalannya algoritma. Berikut adalah langkah-langkah yang diperlukan untuk mencapai keadaan goal:
 
@@ -456,6 +457,7 @@ Implementasi kode di atas merupakan penggunaan algoritma pencarian A* untuk meny
 Algoritma kemudian mencari jalur terbaik menuju keadaan goal dengan mempertimbangkan biaya total (termasuk biaya heuristik, jarak yang sudah ditempuh, dan biaya sebelumnya). Setiap langkah menuju keadaan goal dipilih berdasarkan prioritas biaya terendah, yang ditentukan oleh heuristik yang digunakan. Proses ini terus berlanjut hingga keadaan goal tercapai.
 
 Penting untuk diingat bahwa penggunaan heuristik h1Cost dan h2Cost dapat mempengaruhi perhitungan biaya dan jalannya algoritma. Kedua heuristik ini bisa menghasilkan solusi yang berbeda dalam beberapa kasus. Heuristik h1Cost menghitung biaya dengan cara menghitung jumlah angka yang tidak berada di posisi yang benar, sedangkan h2Cost menghitung biaya berdasarkan jarak Manhatten antara angka yang salah dan posisi yang benar.
+
 # 4. Ubahlah initial dan goal state dari program di atas sehingga bentuk initial dan goal statenya Gambar 5.10. Kemudian tentukan langkah-langkah mana saja sehingga puzzlenya mencapai goal state. Analisa dan bedakan dengan solusi pada point 1, 2, dan 3.
 # Code:
     package JavaApplivation2;
@@ -672,7 +674,7 @@ Penting untuk diingat bahwa penggunaan heuristik h1Cost dan h2Cost dapat mempeng
           new EightPuzzleSearch().run();
       }
     }
-<img width="338" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/bc999852-3349-4cbd-a175-b185c303ab85">
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/477c4a54-c22a-4fcd-8941-3cc4bdb21fc3)
 
 Implementasi kode di atas merupakan penggunaan algoritma pencarian A* (A-star) untuk menyelesaikan masalah 8-puzzle. Dalam implementasi ini, terdapat dua heuristik yang dapat digunakan, yaitu h1Cost dan h2Cost, yang mempengaruhi jalannya algoritma. Heuristik ini digunakan untuk menghitung biaya setiap langkah dalam pencarian solusi.
 
