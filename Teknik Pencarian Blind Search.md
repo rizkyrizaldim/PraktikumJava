@@ -114,7 +114,7 @@
 
 Hasil Output dari Code diatas adalah:
 
-<img width="637" alt="image" src="[https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/1c7570de-2dc5-4cde-bbc5-06044c2d60bd](https://github.com/rizkyrizaldim/pic/issues/1#issue-1975222443)">
+<img width="637" alt="image" src="https://github.com/rizkyrizaldim/pic/issues/1#issue-1975222443">
 
 Pertama, semua node diinisialisasi dengan status "belum dikunjungi", jarak maksimum, dan tanpa node pendahulu.
 
