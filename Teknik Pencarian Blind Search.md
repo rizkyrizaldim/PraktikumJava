@@ -253,7 +253,8 @@ Jadi, urutan kunjungan akan menjadi: `3 -> 4 -> 5 -> 6 -> 7 -> 8`. Harap diingat
 
 Hasil Output dari Code diatas adalah:
 
-<img width="636" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/c197a76e-0979-4a07-b2f5-58218b3ebe06">
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/65f4466d-fa9c-4b5d-8fbe-d1b53eb1c3d2)
+
 
 Algoritma Breadth-First Search (BFS) berfungsi dengan langkah-langkah berikut:
 
@@ -409,7 +410,8 @@ Oleh karena itu, urutan kunjungan akan menjadi: `0 -> 1 -> 2 -> 3 -> 4 -> 5`. Pe
 
 Hasil Output dari Code diatas adalah:
 
-<img width="749" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/d032e5f4-4d85-45a5-96eb-bc42166e641d">
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/5e0cb494-6681-4991-bc10-4f3118bf2340)
+
 
 Algoritma Breadth-First Search (BFS) beroperasi dengan langkah-langkah berikut:
 
@@ -544,7 +546,8 @@ Oleh karena itu, urutan kunjungan adalah: `1 -> 2 -> 3 -> 4 -> 5 -> 9`. Penting 
 
 Hasil Output dari Code diatas adalah:
 
-<img width="730" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/0d95bbac-60d0-4561-8688-962c3b9bc2d5">
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/682321a0-38e0-4d73-a34c-7eca74c5994c)
+
 
 Berikut adalah langkah-langkah untuk menjelaskan bagaimana algoritma BFS menemukan node 'C' dari kode program:
 
