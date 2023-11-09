@@ -1,6 +1,9 @@
-# Rizky Rizaldi Mastiyanto - 5311421085
+# Rizky Rizaldi Mastiyanto (5311421085)
 # Praktek Best First Search
-# Membuat permainan Tic-Tac-Toe 3x3 dengan Java menggunakan NetBeans
+# Permainan Tic-Tac-Toe 3x3
+Tujuan Praktikum untuk meningkatkan pemahaman mahasiswa terhadap code permainan tic tac toe. Selain itu, modul 6
+memberikan pengetahuan tentang Object Oriented Programming menggunakan bahasa pemrograman
+Java terutama Java Swing dan Japplet.
 1. Buka NetBeans dan buat proyek Java baru.
 2. Buat dua file Java: TicTacToe.java dan TicTacToeGUI.java.
 3. Masukkan kode berikut ke dalam file "TicTacToe.java":
