@@ -118,6 +118,5 @@ Berikut adalah penjelasan dari coding
 
 13. Run dan kita memiliki permainan Tic-Tac-Toe 3x3 dengan tombol reset dan keterangan pemenang.
 # Tampilan Output Code diatas :
-![image](https://github.com/rizkyrizaldim/pic/assets/148876602/450263f4-335f-405f-a9f8-235487d1c32c)
-![image](https://github.com/rizkyrizaldim/pic/assets/148876602/e34f430e-f289-45eb-8ade-f7cf1690ba2f)
+![image](https://github.com/rizkyrizaldim/pic/assets/148876602/450263f4-335f-405f-a9f8-235487d1c32c) ![image](https://github.com/rizkyrizaldim/pic/assets/148876602/e34f430e-f289-45eb-8ade-f7cf1690ba2f)
 
