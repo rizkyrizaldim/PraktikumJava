@@ -9,7 +9,7 @@ Berikut adalah penjelasan dari coding
 
 1. Import Package
 
-       import java.awt.*; **//fsh9hs**
+       import java.awt.*; 
        import java.awt.event.*;
        import javax.swing.*;
    
@@ -28,22 +28,22 @@ Berikut adalah penjelasan dari coding
        private char currentPlayer;
        private JLabel statusLabel;
 
-   - 'frame' adalah frame utama dari aplikasi.
-   - 'buttons' adalah array dari tombol-tombol yang merepresentasikan sel di papan permainan.
-   - 'currentPlayer' adalah karakter yang menandakan giliran pemain saat ini ('X' atau 'O').
-   - 'statusLabel' adalah label yang digunakan untuk menampilkan pesan status permainan.
+   - private JFrame frame;: Ini adalah deklarasi dari variabel frame yang merupakan objek dari kelas JFrame. JFrame adalah jendela utama dari aplikasi GUI dalam Java Swing. Jendela ini menyediakan kerangka kerja untuk menampung komponen-komponen GUI lainnya.
+   - private JButton[][] buttons;: Ini adalah deklarasi dari variabel buttons yang merupakan sebuah array dari tombol (JButton). Dalam konteks permainan papan, setiap tombol mungkin akan mewakili satu sel di papan permainan.
+   - private char currentPlayer;: Variabel currentPlayer digunakan untuk melacak pemain yang saat ini sedang bermain. Dalam banyak permainan papan, seperti Tic-Tac-Toe, hanya ada dua pemain (biasanya 'X' dan 'O').
+   - private JLabel statusLabel;: Ini adalah deklarasi dari variabel statusLabel yang merupakan objek dari kelas JLabel. JLabel digunakan untuk menampilkan teks atau informasi statis di antarmuka pengguna.
 
 4. Konstruktor Kelas "TicTacToeGUI":
 
        public TicTacToeGUI() {
 
-    Ini adalah konstruktor untuk kelas TicTacToeGUI. Di dalam konstruktor, kita menginisialisasi atribut-atribut, membuat frame, dan menambahkan tombol-tombol serta label ke dalam frame.
+    Deklarasi dari konstruktor untuk kelas TicTacToeGUI.
 
 5. Mengatur Layout Frame:
 
        frame.setLayout(new GridLayout(4, 3));
 
-    Menggunakan layout 'GridLayout' dengan 4 baris dan 3 kolom untuk mengatur tata letak tombol dan label.
+    Mengatur tata letak (layout) dari frame menggunakan GridLayout. GridLayout adalah salah satu jenis tata letak yang disediakan oleh Java Swing. Tata letak ini mengatur komponen-komponen GUI ke dalam kotak dengan ukuran yang sama. Dalam hal ini, grid layout memiliki 4 baris dan 3 kolom.
 
 6. Membuat Tombol-Tombol:
 
@@ -58,7 +58,7 @@ Berikut adalah penjelasan dari coding
         }
         }
 
-    Kode ini membuat tombol-tombol untuk setiap sel di papan permainan. Setiap tombol memiliki font, warna latar belakang, dan listener untuk menangani klik tombol.
+    Baris kode di atas adalah loop bersarang yang digunakan untuk membuat dan mengonfigurasi tombol-tombol dalam permainan Tic-Tac-Toe. Kode ini secara efektif membuat grid 3x3 dari tombol-tombol yang siap untuk digunakan dalam permainan Tic-Tac-Toe. Setiap tombol telah dikonfigurasi dengan propertis dan perilaku tertentu yang akan mempengaruhi tampilan dan interaksi dengan pengguna.
 
 7. Membuat Tombol Reset:
 
@@ -68,7 +68,7 @@ Berikut adalah penjelasan dari coding
         frame.add(statusLabel);
         frame.add(resetButton);
 
-    Membuat tombol "Reset" yang akan digunakan untuk me-reset permainan. 
+    Baris kode di atas menambahkan sebuah tombol reset ke antarmuka pengguna permainan Tic-Tac-Toe. 
 
 8. Listener untuk Tombol Sel ('ButtonListener'):
 
@@ -76,7 +76,7 @@ Berikut adalah penjelasan dari coding
         // ...
         }
 
-    Kelas ini digunakan untuk menangani klik tombol sel di papan permainan. Jika seorang pemain mengklik tombol, fungsi ini akan menampilkan tanda (X atau O) di tombol dan memeriksa apakah ada pemenang.
+    ButtonListener adalah kelas yang bertugas menangani klik tombol di papan permainan. Ketika seorang pemain mengklik tombol, fungsi ini akan menempatkan tanda (X atau O) di tombol tersebut, lalu memeriksa apakah ada pemenang atau tidak.
 
 9. Listener untuk Tombol Reset ('ResetListener'):
 
@@ -84,7 +84,8 @@ Berikut adalah penjelasan dari coding
         // ...
         }
 
-    Kelas ini digunakan untuk menangani klik tombol "Reset". Saat tombol ini diklik, permainan akan di-reset ke keadaan awal.
+    
+ResetListener adalah kelas yang berfungsi untuk menangani klik tombol "Reset". Ketika tombol ini dipencet, permainan akan dikembalikan ke kondisi awal.
 
 10. Metode "checkForWin":
 
@@ -92,7 +93,8 @@ Berikut adalah penjelasan dari coding
         // ...
         }
 
-      Metode ini digunakan untuk memeriksa apakah ada pemenang setelah setiap langkah. Ini memeriksa baris, kolom, dan diagonal untuk menentukan apakah ada tiga tanda yang sama berturut-turut.
+      
+Fungsi ini digunakan untuk mengevaluasi apakah terdapat pemenang setelah setiap langkah. Ini mengecek baris, kolom, dan diagonal untuk menentukan apakah ada tiga tanda yang serupa berurutan.
 
 11. Metode "highlightWinningLine":
 
@@ -101,7 +103,7 @@ Berikut adalah penjelasan dari coding
         buttons[row2][col2].setBackground(Color.GREEN);
         }
 
-      Metode ini digunakan untuk menyorot garis pemenang dengan mengubah warna latar belakang tombol-tombol yang membentuk garis pemenang menjadi hijau.
+     Fungsi ini bertugas untuk menonjolkan garis pemenang dengan mengubah latar belakang tombol-tombol yang membentuk garis pemenang menjadi warna hijau.
 
 12. Metode "startGame":
 
@@ -111,9 +113,10 @@ Berikut adalah penjelasan dari coding
         frame.setVisible(true);
         }
 
-      Metode ini digunakan untuk memulai permainan dengan mengatur ukuran frame, menentukan operasi penutupan frame, dan menampilkannya.
-    
-5. Run dan kita memiliki permainan Tic-Tac-Toe 3x3 dengan tombol reset dan keterangan pemenang.
+      
+Fungsi ini bertugas untuk memulai permainan dengan mengonfigurasi dimensi frame, mengatur perilaku saat tombol penutup di klik, dan menampilkan frame ke layar.
+
+13. Run dan kita memiliki permainan Tic-Tac-Toe 3x3 dengan tombol reset dan keterangan pemenang.
 # Tampilan Output Code diatas :
 <img width="342" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/33b70992-a8d0-4608-9a83-b8bc702e08ca">
 <img width="322" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/68ba1366-ea1c-4999-b28e-079bb7e9c759">
