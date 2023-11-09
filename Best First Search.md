@@ -18,7 +18,7 @@ Java terutama Java Swing dan Japplet.
 3. Masukkan kode berikut ke dalam file "TicTacToeGUI.java":
 
        import java.awt.*;
-       import java.awt.event.*; //s
+       import java.awt.event.*; 
        import javax.swing.*;
 
         public class TicTacToeGUI {
@@ -139,7 +139,13 @@ Java terutama Java Swing dan Japplet.
         buttons[row2][col2].setBackground(Color.GREEN);
         }
         }
-
+Baris 1-3 adalah bagian untuk mengimpor package-package yang diperlukan untuk membuat GUI dalam Java.
+Baris 6-9 adalah atribut-Atribut Kelas:
+  - 'frame' adalah frame utama dari aplikasi.
+  - 'buttons' adalah array dari tombol-tombol yang merepresentasikan sel di papan permainan.
+  - 'currentPlayer' adalah karakter yang menandakan giliran pemain saat ini ('X' atau 'O').
+  - 'statusLabel' adalah label yang digunakan untuk menampilkan pesan status permainan.
+Baris 10-11
 5. Run dan kita memiliki permainan Tic-Tac-Toe 3x3 dengan tombol reset dan keterangan pemenang.
 # Tampilan Output Code diatas :
 <img width="342" alt="image" src="https://github.com/RadityWisnu/Artificial-Intelligence-Tasks/assets/148683085/33b70992-a8d0-4608-9a83-b8bc702e08ca">
