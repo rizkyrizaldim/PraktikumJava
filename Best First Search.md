@@ -4,9 +4,9 @@
 Tujuan Praktikum untuk meningkatkan pemahaman mahasiswa terhadap code permainan tic tac toe. Selain itu, modul 6
 memberikan pengetahuan tentang Object Oriented Programming menggunakan bahasa pemrograman
 Java terutama Java Swing dan Japplet.
-1. Buka NetBeans dan buat proyek Java baru.
-2. Buat dua file Java: TicTacToe.java dan TicTacToeGUI.java.
-3. Masukkan kode berikut ke dalam file "TicTacToe.java":
+
+1. Buat dua file Java: TicTacToe.java dan TicTacToeGUI.java.
+2. Masukkan kode berikut ke dalam file "TicTacToe.java":
 
         public class TicTacToe {
         public static void main(String[] args) {
@@ -14,10 +14,11 @@ Java terutama Java Swing dan Japplet.
         game.startGame();
         }
         }
-4. Masukkan kode berikut ke dalam file "TicTacToeGUI.java":
+   Kelas ini digunakan untuk membuat antarmuka pengguna grafis (GUI) permainan Tic-Tac-Toe.
+3. Masukkan kode berikut ke dalam file "TicTacToeGUI.java":
 
        import java.awt.*;
-       import java.awt.event.*;
+       import java.awt.event.*; //s
        import javax.swing.*;
 
         public class TicTacToeGUI {
