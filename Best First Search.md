@@ -13,7 +13,7 @@ Berikut adalah penjelasan dari coding
        import java.awt.event.*;
        import javax.swing.*;
    
-   Ini adalah bagian untuk mengimpor package-package yang diperlukan untuk membuat GUI dalam Java.
+   Baris ini mengimpor paket-paket yang diperlukan dari Java untuk membuat antarmuka grafis. java.awt dan javax.swing menyediakan kelas kelas yang diperlukan untuk membuat jendela, tombol, panel, dan elemen-elemen antarmuka pengguna lainnya.
 
 2. Deklarasi Kelas "TicTacToeGUI":
 
