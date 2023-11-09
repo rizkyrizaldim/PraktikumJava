@@ -85,7 +85,7 @@ Berikut adalah penjelasan dari coding
         }
 
     
-ResetListener adalah kelas yang berfungsi untuk menangani klik tombol "Reset". Ketika tombol ini dipencet, permainan akan dikembalikan ke kondisi awal.
+   ResetListener adalah kelas yang berfungsi untuk menangani klik tombol "Reset". Ketika tombol ini dipencet, permainan akan dikembalikan ke kondisi awal.
 
 10. Metode "checkForWin":
 
@@ -94,7 +94,7 @@ ResetListener adalah kelas yang berfungsi untuk menangani klik tombol "Reset". K
         }
 
       
-Fungsi ini digunakan untuk mengevaluasi apakah terdapat pemenang setelah setiap langkah. Ini mengecek baris, kolom, dan diagonal untuk menentukan apakah ada tiga tanda yang serupa berurutan.
+    Fungsi ini digunakan untuk mengevaluasi apakah terdapat pemenang setelah setiap langkah. Ini mengecek baris, kolom, dan diagonal untuk menentukan apakah ada tiga tanda yang serupa berurutan.
 
 11. Metode "highlightWinningLine":
 
@@ -114,7 +114,7 @@ Fungsi ini digunakan untuk mengevaluasi apakah terdapat pemenang setelah setiap 
         }
 
       
-Fungsi ini bertugas untuk memulai permainan dengan mengonfigurasi dimensi frame, mengatur perilaku saat tombol penutup di klik, dan menampilkan frame ke layar.
+    Fungsi ini bertugas untuk memulai permainan dengan mengonfigurasi dimensi frame, mengatur perilaku saat tombol penutup di klik, dan menampilkan frame ke layar.
 
 13. Run dan kita memiliki permainan Tic-Tac-Toe 3x3 dengan tombol reset dan keterangan pemenang.
 # Tampilan Output Code diatas :
