@@ -140,6 +140,7 @@ Java terutama Java Swing dan Japplet.
         }
         }
 Baris 1-3 adalah bagian untuk mengimpor package-package yang diperlukan untuk membuat GUI dalam Java.
+
 Baris 6-9 adalah atribut-Atribut Kelas:
   - 'frame' adalah frame utama dari aplikasi.
   - 'buttons' adalah array dari tombol-tombol yang merepresentasikan sel di papan permainan.
