@@ -9,7 +9,7 @@ Berikut adalah penjelasan dari coding
 
 1. Import Package
 
-       import java.awt.*;
+       import java.awt.*; **//fsh9hs**
        import java.awt.event.*;
        import javax.swing.*;
    
